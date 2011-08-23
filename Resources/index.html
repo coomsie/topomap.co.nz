@@ -25,9 +25,37 @@
             html, body, #map {
                 height: 100%;
             }
+            #home
+            {
+            	position: fixed;
+				right: 10px;
+				float:right;
+				top:10px;
+				z-index: 999;
+				background-color: #333333;
+				opacity: .5;
+				border: 10px;
+				padding: 5px;
+				border-radius: 5px;
+           	}
+           	#home img
+           	{
+           		width: 32px;
+				height: 32px;
+           	}
             </style>
+            <script type="application/javascript">
+            
+            function click_home(){
+            Ti.App.fireEvent('switch_tabs_click', {
+            	tab: 0
+            });
+            };
+            	
+            </script>
 	</head>
 	<body>
+		<div id='home' onclick="click_home();" ><img src='home_64.png'></img></div>
 		<div id="map"></div> <!-- width equals available horizontal space by default -->
 	<!-- Leaflet JavaScript -->
 		<script src="leaflet/leaflet.js"></script>
@@ -41,7 +69,7 @@
 			// cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
 
 			
-			var cloudmadeUrl = 'Topo/{z}/{x}/{y}.jpg', cloudmadeAttrib = 'topomap.co.nz Images Sourced from LINZ &copy;.',
+			var cloudmadeUrl = 'Topo/{z}/{x}/{y}.jpg', cloudmadeAttrib = 'Images Sourced from LINZ &copy;.',
 			cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, scheme: 'tms' , errorTileUrl : 'map.jpg'});
     		// var cloudmadeUrl = 'cloudtiles/{z}/{x}/{y}.png',cloudmadeAttrib = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
     		// cloudmade = new L.TileLayer.DB(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, errorTileUrl : 'map.jpg'});
