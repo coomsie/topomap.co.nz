@@ -1,0 +1,8 @@
+Logfile initialized
+[INFO] logfile = /Users/coomsie/Documents/Titanium Studio Workspace/topomap.co.nz/build.log
+[DEBUG] /Library/Application Support/Titanium/mobilesdk/osx/1.7.2/android/builder.py simulator topomap.co.nz /Users/coomsie/Code/android-sdk-mac_x86 /Users/coomsie/Documents/Titanium Studio Workspace/topomap.co.nz topomap.co.nz 10 HVGA 
+[INFO] Building topomap.co.nz for Android ... one moment
+[INFO] Titanium SDK version: 1.7.2 (07/21/11 09:36 97c3689)
+[DEBUG] Waiting for device to be ready ...
+[TRACE] adb devices returned 0 devices/emulators
+[TRACE] adb devices returned 0 devices/emulators
