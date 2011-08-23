@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+		<title>index</title>
+		<meta name="description" content="" />
+		<meta name="author" content="Iain Campion" />
+		<meta name="viewport" content="width=device-width; initial-scale=1.0" />
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		<!-- Leaflet CSS --> 
+		<link rel="stylesheet" href="leaflet/leaflet.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="<path_to_dist>/leaflet.ie.css" /><![endif]-->
+
+		<!-- make sure wdth is correct -->
+        <style>
+            body {
+                padding: 0;
+                margin: 0;
+            }
+            html, body, #map {
+                height: 100%;
+            }
+            </style>
+	</head>
+	<body>
+		<div id="map"></div> <!-- width equals available horizontal space by default -->
+	<!-- Leaflet JavaScript -->
+		<script src="leaflet/leaflet.js"></script>
+		<script src="leaflet/TileLayer.DB.js"></script>
+		
+		<script type="application/javascript">
+			var map = new L.Map('map');
+			
+			// var cloudmadeUrl = 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png',
+			// cloudmadeAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
+			// cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttribution});
+
+			
+			var cloudmadeUrl = 'Topo/{z}/{x}/{y}.jpg', cloudmadeAttrib = 'topomap.co.nz Images Sourced from LINZ &copy;.',
+			cloudmade = new L.TileLayer(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, scheme: 'tms' , errorTileUrl : 'map.jpg'});
+    		// var cloudmadeUrl = 'cloudtiles/{z}/{x}/{y}.png',cloudmadeAttrib = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
+    		// cloudmade = new L.TileLayer.DB(cloudmadeUrl, {maxZoom: 18, attribution: cloudmadeAttrib, errorTileUrl : 'map.jpg'});
+//         
+   			var chch = new L.LatLng(-43.58909, 172.62354);
+   			//var afr = new L.LatLng(9.7,21);
+   			 // geographical point (longitude and latitude)
+			map.setView(chch, 14).addLayer(cloudmade);
+			
+			// var imageBounds = new L.LatLngBounds(
+        // new L.LatLng(-43.7118464561371, 172.245972828101),
+        // new L.LatLng(-43.0856092650502,172.872210019188));
+//         
+		// var image = new L.ImageOverlay(
+        // "busroutes.png", imageBounds);
+//         
+        // map.addLayer(image);
+        
+  
+// 			
+			// var sitesLayer = new L.AgsDynamicLayer(
+    		// 'http://arcgis.ecan.govt.nz/ArcGIS/rest/services/Public/Bus_Routes/MapServer',
+	    	// { maxZoom: 19,
+	        // attribution: "ECan",
+	        // opacity: 1
+	      		// });
+			// map.addLayer(sitesLayer);
+			
+			//var nexrad = new L.TileLayer.AGSDynamic(
+          // 'http://arcgis.ecan.govt.nz/ArcGIS/rest/services/Public/Bus_Routes/MapServer',
+          //       {  maxZoom: 19,
+           //         attribution: "ECan",
+           //         opacity: 0.5,
+                    //layers: 'show:18',
+           //         cacheBuster: true });
+			//_map.addLayer(nexrad);
+
+	    
+		</script>
+		
+	</body>
+</html>
