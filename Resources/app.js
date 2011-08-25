@@ -53,7 +53,7 @@ var tab3 = Titanium.UI.createTab({
 });
 
 var webview = Titanium.UI.createWebView({
-	url : 'index.html'
+	url : 'index.html',
 })
 
 win3.add(webview)
@@ -92,7 +92,7 @@ Ti.App.tabGroup.addTab(tab3);
 Ti.App.tabGroup.addTab(tab4);
 
 // open tab group
-Ti.App.tabGroup.setActiveTab(0);
+Ti.App.tabGroup.setActiveTab(2);
 
 // open tab group
 Ti.App.tabGroup.open({
