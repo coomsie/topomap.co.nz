@@ -1,0 +1,8 @@
+Webkit db locations
+
+WebKit/Databases/file_0/0000000000000001.db
+
+WebKit/Databases/Database.db
+
+
+Application Support/database/locations.sql

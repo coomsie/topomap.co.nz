@@ -2,7 +2,7 @@
 ///var db = Ti.Database.install('locations.sqlite', 'locations');
 
 //drop index
-var sql = "select * from locations order by name limit 2000";
+var sql = "select * from locations order by name limit 200";
 var mydb = Ti.Database.install('../locations.sqlite', 'locations');
 var locationsRS;
 locationsRS = mydb.execute(sql);
